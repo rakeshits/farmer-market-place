@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Friend - Crop Rates</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+#crop-rates {
+  margin-bottom: 20px;
+}
+
+#rates-table {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.trend-high {
+  color: green;
+  font-weight: bold;
+}
+
+.trend-low {
+  color: red;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+.ra{
+    padding: 5px;
+    background-color: #ddd;
+    margin: 15px;
+    border-radius:10px;
+    text-align: center;
+    font-size: larger;
+}
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+  </style>
+  
+</head>
+<body>
+    <header>
+        <h1>Farmer Friend</h1>
+        <p>Directly connect farmers to sellers without middlemen!</p>
+      </header>
+    
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="rate.html">Crop rates</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+      </nav>
+
+  </header>
+  <div class="ra">
+  <p> Here you will know the prices of all crops and farmer products</p>
+</div>
+  <main>
+    <section id="crop-rates">
+      <h2>Crop and Product Rates</h2>
+      <div id="rates-table">
+        <!-- Crop and product rates will be dynamically loaded here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Farmer Friend. All rights reserved.</p>
+  </footer>
+<script>
+    // Mock data for crops and products
+const cropData = [
+  {
+    name: "Wheat",
+    rate: "₹20/kg",
+    quantity: "1000 kg",
+    trend: "High (October - December)",
+    trendClass: "trend-high",
+  },
+  {
+    name: "Rice",
+    rate: "₹25/kg",
+    quantity: "800 kg",
+    trend: "Low (March - June)",
+    trendClass: "trend-low",
+  },
+  {
+    name: "Corn",
+    rate: "₹18/kg",
+    quantity: "1200 kg",
+    trend: "Medium (July - September)",
+    trendClass: "",
+  },
+  {
+    name: "Tomatoes",
+    rate: "₹40/kg",
+    quantity: "500 kg",
+    trend: "High (January - March)",
+    trendClass: "trend-high",
+  },
+  {
+    name: "Potatoes",
+    rate: "₹15/kg",
+    quantity: "1500 kg",
+    trend: "Low (August - October)",
+    trendClass: "trend-low",
+  },
+];
+
+// Function to display crop data in the table
+function displayCropData() {
+  const ratesTable = document.getElementById("rates-table");
+
+  const tableHTML = `
+    <table>
+      <tr>
+        <th>Crop/Product</th>
+        <th>Rate</th>
+        <th>Quantity Available</th>
+        <th>Rate Trend</th>
+      </tr>
+      ${cropData
+        .map(
+          (crop) => `
+        <tr>
+          <td>${crop.name}</td>
+          <td>${crop.rate}</td>
+          <td>${crop.quantity}</td>
+          <td class="${crop.trendClass}">${crop.trend}</td>
+        </tr>
+      `
+        )
+        .join("")}
+    </table>
+  `;
+
+  ratesTable.innerHTML = tableHTML;
+}
+
+// Load crop data on page load
+displayCropData();
+</script>
+ 
+</body>
+</html>

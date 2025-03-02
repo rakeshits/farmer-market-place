@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Fresh - Buy Direct from Farmers</title>
+  
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+.cta-button {
+    background-color: white;
+    color: #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+.product-card p {
+    color: #777;
+}
+
+.buy-now {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+.buy-now:hover {
+    background-color: #45a049;
+}
+
+/* Contact Form */
+.contact-form {background-color: #fff;
+    padding: 30px;
+    margin: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .cta-button {
+    background-color: white;
+    color: #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 50px;
+    flex-wrap: wrap;
+}
+product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 250px;
+    
+   
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+.product-card p {
+    color: #777;
+}
+.buy-now {
+    background-color: #30cf35;
+    color: white;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+.buy-now:hover {
+    background-color: #45a049;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.h2{
+    text-align: center;
+   
+    margin-top: 10px;
+}
+#shopping-cart {
+  margin-top: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cart-items {
+  margin-bottom: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#checkout-btn {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#checkout-btn:hover {
+  background-color: #45a049;
+}
+
+</style>
+<body>
+   <section class="hero">
+        <h1>Farm Fresh - Buy Directly from Farmers</h1>
+        <p>Get Fresh Crops Direct from the Farms to Your Doorstep</p>
+        
+    </section>
+<div class="h2">
+<h2>Our Fresh Crops</h2>
+</div>
+<section id="products" class="products">
+    
+    <div class="product-card">
+        <img src="weat.jpg" alt="weat">
+        <h3>weat</h3>
+        <p>Price: $1.80 per kg</p>
+        <p>Farm: Fresh Fields</p>
+        <button class="buy-now" onclick="showContactForm('Fresh Fields', 'Tomatoes')">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+        <img src="apple.jpg" alt="Fresh Apples">
+        <h3>Fresh Apples</h3>
+        <p>Price: 3.99 per kg</p>
+        <p>Farm: Green Valley Farms</p>
+        <button class="buy-now" onclick="showContactForm('Green Valley Farms', 'Apples')">Buy Now</button>
+    </div>
+    <div class="product-card">
+        <img src="carrot.jpg" alt="Organic Carrots">
+        <h3>Organic Carrots</h3>
+        <p>Price:2.99 per kg</p>
+        <p>Farm: Sunny Acres</p>
+        <button class="buy-now" onclick="showContactForm('Sunny Acres', 'Carrots')">Buy Now</button>
+    </div>
+    <div class="product-card">
+        <img src="tomato.jpg" alt="Tomatoes">
+        <h3>Tomatoes</h3>
+        <p>Price: $1.49 per kg</p>
+        <p>Farm: Fresh Fields</p>
+        <button class="buy-now" onclick="showContactForm('Fresh Fields', 'Tomatoes')">Buy Now</button>
+    </div>
+    <div class="product-card">
+        <img src="rice.jpg" alt="rice">
+        <h3>Rice</h3>
+        <p>Price: $2.00 per kg</p>
+        <p>Farm: Fresh Fields</p>
+        <button class="buy-now" onclick="showContactForm('Fresh Fields', 'rice')">Buy Now</button>
+    </div>
+</section>
+
+<section id="shopping-cart">
+    <h2>Shopping Cart</h2>
+    <div id="cart-items">
+      <!-- Cart items will be dynamically loaded here -->
+    </div>
+    <p>Total: ₹<span id="cart-total">0</span></p>
+    <button id="checkout-btn">Proceed to Checkout</button>
+  </section>
+
+ <!-- Footer -->
+ <footer>
+    <p>&copy; 2025 Farm Fresh | All rights reserved</p>
+</footer>
+
+<script>
+    // Mock data for products
+const products = [
+  {
+    id: 1,
+    name: "Wheat",
+    price: 20,
+    image: "weat.jpg",
+    quantity: "1 kg",
+  },
+  {
+    id: 2,
+    name: "apple",
+    price: 20,
+    image: "apple.jpg",
+    quantity: "1 kg",
+  },
+  {
+    id: 3,
+    name: "Rice",
+    price: 25,
+    image: "rice.jpg",
+    quantity: "1 kg",
+  },
+  {
+    id: 4,
+    name: "Tomatoes",
+    price: 40,
+    image: "tomato.jpg",
+    quantity: "1 kg",
+  },
+  {
+    id: 5,
+    name: "carrot",
+    price: 15,
+    image: "carrot.jpg",
+    quantity: "1 kg",
+  },
+];
+
+// Shopping cart data
+let cart = [];
+let total = 0;
+
+// Display products
+function displayProducts() {
+  const productsContainer = document.querySelector(".products");
+  productsContainer.innerHTML = products
+    .map(
+      (product) => `
+      <div class="product-card">
+        <img src="${product.image}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <p>₹${product.price} / ${product.quantity}</p>
+        <button onclick="addToCart(${product.id})" class="buy-now">Buy Now</button>
+      </div>
+    `
+    )
+    .join("");
+}
+
+// Add product to cart
+function addToCart(productId) {
+  const product = products.find((p) => p.id === productId);
+  cart.push(product);
+  total += product.price;
+  updateCart();
+}
+
+// Update cart UI
+function updateCart() {
+  const cartItems = document.getElementById("cart-items");
+  const cartTotal = document.getElementById("cart-total");
+
+  cartItems.innerHTML = cart
+    .map(
+      (item) => `
+      <div class="cart-item">
+        <span>${item.name}</span>
+        <span>₹${item.price}</span>
+      </div>
+    `
+    )
+    .join("");
+
+  cartTotal.textContent = total;
+}
+
+// Checkout
+document.getElementById("checkout-btn").addEventListener("click", () => {
+  alert(`Order placed successfully! Total: ₹${total}`);
+  cart = [];
+  total = 0;
+  updateCart();
+});
+
+// Load products on page load
+displayProducts();
+</script>
+</body>
+</html>
